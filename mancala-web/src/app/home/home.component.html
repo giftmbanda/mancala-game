@@ -1,10 +1,16 @@
-<div class="main-content d-flex justify-content-center">
-	<p> This repository contains a Spring Boot REST API for the classic Mancala game. The application is built with
-		Spring Boot and utilizes MongoDB for the
-		database and Redis for caching game data. The application can be run the locally on your host machine, or as
-		containerized environment using Docker.</p>
-</div>
-
-<div class="d-flex gap-2 justify-content-center pb-5">
-	<button class="btn btn-outline-primary rounded-circle p-3 lh-1">3</button>
+<div class="container mx-auto">
+	<h1>Mancala Game</h1>
+	<div class="row">
+		<!-- Player 1's pits -->
+		<div class="col-1" *ngFor="let pit of gameDataSource.pits.slice(0, 7)">
+			<button (click)="updateGame(pit.id)" type="button" class="btn btn-outline-primary me-2">{{ pit.seeds }}</button>
+		</div>
+	</div>
+	<hr />
+	<div class="row">
+		<!-- Player 1's pits -->
+		<div class="col-1" *ngFor="let pit of gameDataSource.pits.slice(7).reverse()">
+			<button (click)="updateGame(pit.id)" type="button" class="btn btn-outline-danger me-2">{{ pit.seeds }}</button>
+		</div>
+	</div>
 </div>

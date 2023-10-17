@@ -26,4 +26,15 @@ export class HomeComponent implements OnInit {
     })
   };
 
+  public updateGame(pitId: string): any {
+    this.homeService.updateGame(this.gameDataSource.id, pitId).subscribe(res => {
+      if (res.id) {
+        this.gameDataSource = res;
+        console.log(this.gameDataSource);
+      } else {
+        console.log(res.result);
+      }
+    })
+  };
+
 }

@@ -23,7 +23,7 @@ export class HomeService {
   }
 
   public updateGame(gameId: string, pitId: string): Observable<any> {
-    return this.http.get<any>(`${this.GAME_URL}/${gameId}pit/${pitId}`, {}).pipe(map((res: any) => {
+    return this.http.put<any>(`${this.GAME_URL}/${gameId}/pit/${pitId}`, {}).pipe(map((res: any) => {
       return res;
     }), catchError(err => {
       return err;
