@@ -20,11 +20,11 @@ Follow these steps to get the Mancala Game API up and running:
 1. Clone this repository to your local machine using Git:
 
    ```bash
-   git clone https://github.com/your-username/mancala-game-api.git
+   git clone https://github.com/giftmbanda/mancala-game
 
 2. Change your current directory to the root folder of the project:
    ```bash
-   cd mancala-game
+   cd mancala-api
 
 3. Run the application using Docker Compose
 
