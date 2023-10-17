@@ -37,9 +37,9 @@ This command will build and start the necessary containers for the Mancala Game 
 Once the application is up and running, you can access API documentation via Swagger UI at http://localhost:8080/swagger-ui/index.html
 You are now ready to interact with the Mancala Game API.
 
-![Alt Text](https://github.com/giftmbanda/mancala-game/blob/main/SwaggerUI_screenshot.png)
-![Alt Text](https://github.com/giftmbanda/mancala-game/blob/main/Game_screenshot.png)
-![Alt Text](https://github.com/giftmbanda/mancala-game/blob/main/Game_in_progress_screenshot.png)
+![Alt Text](https://github.com/giftmbanda/mancala-game/blob/main/mancala-api/SwaggerUI_screenshot.png)
+![Alt Text](https://github.com/giftmbanda/mancala-game/blob/main/mancala-api/Game_screenshot.png)
+![Alt Text](https://github.com/giftmbanda/mancala-game/blob/main/mancala-api/Game_in_progress_screenshot.png)
 POST http://localhost:8080/game/create - Create a game and returns game object having id, pits, and player
 
 PUT http://localhost:8080/game/{gameId}/pit/{PitId} - Update/plays on pits of passed pitId in the game of passed gameId
