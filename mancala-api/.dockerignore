@@ -1,0 +1,40 @@
+# Exclude commonly generated or temporary files
+target/
+*.iml
+*.log
+*.log.*
+*.db
+*.hprof
+*.jfr
+*.jar.original
+hs_err_pid*
+
+# Exclude IDE-specific files
+.idea/
+.vscode/
+
+# Exclude version control system files
+.git/
+.gitignore
+.gitattributes
+.gitmodules
+.svn/
+.hg/
+
+# Exclude build tools
+gradle/
+mvnw
+mvnw.cmd
+maven-wrapper/
+
+# Exclude test and documentation files
+test/
+docs/
+swagger/
+javadoc/
+
+# Exclude configuration files (modify this list as needed)
+# application.properties
+# application.yml
+
+# Exclude any other files or directories that are not needed in the image

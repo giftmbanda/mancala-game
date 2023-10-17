@@ -1,0 +1,37 @@
+version: '3.7'
+
+services:
+  mancala-service:
+    container_name: mancala-api
+    image: mancala
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongodb-service
+      - redis-service
+    restart: always
+
+  mongodb-service:
+    container_name: MongoDB
+    image: mongo:latest
+    ports:
+      - "27017:27017"  # Map container's port 27017 to host's port 27017
+    volumes:
+      - mongodb_data:/data/db   # MongoDB data volume
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ""
+      MONGO_INITDB_ROOT_PASSWORD: ""
+      MONGO_INITDB_DATABASE: mancaladb
+    restart: always
+
+  redis-service:
+    container_name: Redis
+    image: redis:latest
+    ports:
+      - "6379:6379"
+
+volumes:
+  mongodb_data:
