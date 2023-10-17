@@ -5,6 +5,7 @@
 /tmp
 /out-tsc
 /bazel-out
+./mancala-web
 
 # Node
 /node_modules
